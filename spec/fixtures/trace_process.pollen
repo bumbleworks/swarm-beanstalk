@@ -1,0 +1,13 @@
+---
+name: trace_process
+title: "Trace Process"
+---
+sequence do
+  trace "first string"
+  trace "second string"
+  sequence do
+    trace "third string"
+    trace "fourth string"
+  end
+  trace "final string"
+end
