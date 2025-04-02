@@ -23,7 +23,7 @@ RSpec.configure do |config|
 
   config.before(:suite) do
     Swarm::Hive.default = Swarm::Hive.new(
-      :storage => Swarm::Storage.new({}),
+      :storage => Swarm::Storage::HashStorage.new({}),
       :work_queue => Swarm::Beanstalk::Queue.new(:name => "swarm-test-queue")
     )
   end
